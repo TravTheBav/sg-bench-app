@@ -1,0 +1,17 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  time: 2023-07-11 18:50:53
+  map: MyString
+  notes: MyText
+  user: one
+  match_outcome: MyString
+  build_order: MyString
+
+two:
+  time: 2023-07-11 18:50:53
+  map: MyString
+  notes: MyText
+  user: two
+  match_outcome: MyString
+  build_order: MyString
