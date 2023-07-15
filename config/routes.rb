@@ -15,6 +15,8 @@ Rails.application.routes.draw do
     resources :attack_benchmarks
   end
 
+  get 'users/:id/account_info', to: 'users#account_info', as: :show_account_info
+
   # routes for adding and deleting build order steps
   resources :build_order_steps, only: [], param: :index do
     member do
