@@ -10,7 +10,7 @@ Rails.application.routes.draw do
   get 'about', to: 'static_pages#about', as: :about
 
   # user routes with scoped resources
-  resources :users do
+  resources :users, only: [:show] do
     resources :build_orders
     resources :attack_benchmarks
   end
