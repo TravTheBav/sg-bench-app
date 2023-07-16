@@ -10,4 +10,13 @@ module ApplicationHelper
 
         User.find(params[:id]) == current_user
     end
+
+    # checks if user has an avatar; display default if not
+    def grab_avatar(user)
+        if user.avatar.attached?
+            user.avatar
+        else
+            'chicken-avatar.png'
+        end
+    end
 end

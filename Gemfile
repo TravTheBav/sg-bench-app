@@ -52,6 +52,9 @@ gem 'bootstrap5-kaminari-views'
 # Testing for rails controllers
 gem "rails-controller-testing"
 
+# Allows for images to be scaled down for user avatars
+gem 'image_processing'
+
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem "debug", platforms: %i[ mri mingw x64_mingw ]

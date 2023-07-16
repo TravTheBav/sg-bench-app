@@ -34,3 +34,13 @@ html, body {
 .inline-block {
     display: inline-block;
 }
+
+.avatar {
+    border-radius: 50%;
+    width: min(80px, max(5.5vw, 5.5vh));
+    height: min(80px, max(5.5vw, 5.5vh));
+}
+
+.error {
+    color: red;
+}

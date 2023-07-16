@@ -1,11 +1,11 @@
-<% provide(:title, "#{@user.username}") %>
+<% provide(:title, "#{@user.username} | Dashboard") %>
+
+<div class="my-5 d-flex justify-content-center align-items-center gap-3">
+    <h1 class="m-0 display-4"><%= @user.username %></h1>
+    <%= image_tag grab_avatar(@user), class: "avatar" %>
+</div>
 
 <div class="container-fluid my-5">
-    <% if authorized_user? %>
-        <div class="m-4"><%= link_to 'Account', show_account_info_path %></div>
-    <% end %>
-    <h1 class="mt-4 display-4 text-center"><%= @user.username %></h1>
-    
     <div class="row my-5 justify-content-evenly">
         <div class="col-sm-5 mb-3">
             <div class="card">
