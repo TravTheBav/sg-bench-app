@@ -31,6 +31,13 @@ html, body {
     background-position: center;
 }
 
+.about-page {
+    height: 45vh;
+    background-image: url("about-page-top.png");
+    background-repeat: no-repeat;
+    background-size: cover; 
+}
+
 .inline-block {
     display: inline-block;
 }
