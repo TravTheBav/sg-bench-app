@@ -6,7 +6,7 @@
     <hr class="my-4">
   
     <div class="row d-flex justify-content-center">
-      <div class="col-md-6 d-flex justify-content-center">
+      <div class="col-md-6">
         <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
           <%= render "devise/shared/error_messages", resource: resource %>
           <div class="field my-3">
@@ -26,6 +26,7 @@
           <div class="actions my-3 pt-2">
             <%= f.submit "Sign in", class: "btn btn-primary btn-lg" %>
           </div>
+          <p class="fs-4">Not a member? <%= link_to 'Create an account', new_user_registration_path %></p>
         <% end %>
       </div>
     </div>
