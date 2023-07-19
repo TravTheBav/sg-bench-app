@@ -4,11 +4,13 @@ class Ability
   include CanCan::Ability
 
   def initialize(user)
-    # if a user is logged in they can manage their own build orders and benchmarks
-    return unless user.present?
-    can :read, :all
-
-    return unless user.admin?
-    can :manage, :all
+    user ||= User.new # guest user (not logged in)
+    if user.admin?
+      can :manage, :all
+    else
+      can :read, User, id: user.id
+      can :read, BuildOrder, user_id: user.id
+      can :read, AttackBenchmark, user_id: user.id      
+    end
   end
 end
