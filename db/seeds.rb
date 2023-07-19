@@ -9,6 +9,16 @@
 # Seed user
 User.destroy_all
 
+User.create!(
+    {
+        username: "TravTheBav",
+        email: "admin@example.com",
+        password: "abcdefg",
+        password_confirmation: "abcdefg",
+        admin: true
+    }
+)
+
 user = User.create!(
     {
         username: "Foob",

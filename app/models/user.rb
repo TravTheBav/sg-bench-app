@@ -9,6 +9,10 @@ class User < ApplicationRecord
   has_many :attack_benchmarks, dependent: :destroy
   has_one_attached :avatar
 
+  def admin?
+    admin
+  end
+
   def acceptable_avatar
     return unless avatar.attached?
 
