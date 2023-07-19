@@ -8,6 +8,7 @@ class Ability
     if user.admin?
       can :manage, :all
     else
+      can :account_info, User, id: user.id
       can :read, User, id: user.id
       can :read, BuildOrder, user_id: user.id
       can :read, AttackBenchmark, user_id: user.id      
