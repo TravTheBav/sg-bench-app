@@ -3,7 +3,7 @@
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav-links" aria-controls="nav-links" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <div id="nav-links" class="collapse navbar-collapse">
+        <div id="nav-links" class="collapse navbar-collapse justify-content-end">
             <ul class="nav navbar-nav mr-4">
                 <li class="nav-item"><%= link_to 'About', about_path, :class => "nav-link" %></li>
                 <% if user_signed_in? %>
