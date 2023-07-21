@@ -9,9 +9,9 @@ class Ability
       can :manage, :all
     else
       can :account_info, User, id: user.id
-      can :read, User, id: user.id
-      can :read, BuildOrder, user_id: user.id
-      can :read, AttackBenchmark, user_id: user.id      
+      can :manage, User, id: user.id
+      can :manage, BuildOrder, user_id: user.id
+      can :manage, AttackBenchmark, user_id: user.id      
     end
   end
 end
